@@ -1,6 +1,3 @@
-const path = require('path');
-const webpack = require('webpack');
-
 module.exports = {
     entry: {
         vendor: './src/js/vendor.js',
@@ -9,7 +6,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.html$/,
+                test: /\.html$/i,
                 use: ['html-loader']
             },
             {
@@ -28,7 +25,7 @@ module.exports = {
                     loader: 'file-loader',
                     options: {
                         name: '[name].[hash].[ext]',
-                        outputPath: ''
+                        outputPath: 'assets/img'
                     }
                 }
             }
