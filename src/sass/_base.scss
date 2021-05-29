@@ -7,9 +7,25 @@
 }
 
 html {
-    font-size: 62.5%; // 1rem = 10px, 10/16 = 62.5%
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
+    font-size: 62.5%; // 1rem = 10px, 10/16*100 = 62.5%
+
+    @include respond(1366) {
+        font-size: 43.75%;
+    }
+
+    @include respond(phone) {
+        font-size: 37.5%;
+    }
+
+    @include respond(2560) {
+        font-size: 68.75%;
+    }
+
+    @include respond(3840) {
+        font-size: 112.5%;
+    }
 }
 
 body {
@@ -27,6 +43,7 @@ input,
 textarea {
     border: none;
     font-family: inherit;
+    font-size: inherit;
 
     &:focus {
         outline: none;
@@ -74,9 +91,4 @@ svg {
     height: 100%;
     width: 100%;
     pointer-events: none;
-}
-
-textarea {
-    font-family: inherit;
-    font-size: inherit;
 }

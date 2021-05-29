@@ -1,6 +1,20 @@
 # web-app-template
-Front-end template for web apps that i use in my projects. Includes folder structure, custom css reset, scss, eslint, webpack, dev server and production build
 
-To setup everything run: npm install
-To start dev mode run: npm start
-To build prod run: npm run build
+Simple front-end template for web apps that i use in my projects. Includes:
+
+ - folder structure
+ - scss
+ - custom css reset
+ - responsive sizing with rem
+ - eslint
+ - webpack
+ - development server
+ - production build.
+
+# Setup
+
+To setup everything run: **npm i**
+
+To start development mode run: **npm start**
+
+To build production run: **npm run build**
