@@ -27,7 +27,8 @@ module.exports = merge(common, {
                     removeAttributeQuotes: true,
                     collapseWhitespace: true,
                     removeComments: true
-                }
+                },
+                favicon: './src/assets/img/favicon.png'
             })
         ]
     },
