@@ -6,6 +6,17 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env'],
+                        plugins: ['@babel/plugin-proposal-object-rest-spread']
+                    }
+                }
+            },
+            {
                 test: /\.html$/i,
                 use: ['html-loader']
             },
@@ -20,7 +31,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.(png|jpg|gif|svg)/,
+                test: /\.(webp|jpg|png|gif|svg)/,
                 use: {
                     loader: 'file-loader',
                     options: {
